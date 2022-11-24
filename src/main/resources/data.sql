@@ -35,15 +35,30 @@ insert into foto (id, nome, mimetype, data) values
    
    
 insert into produto (id, nome, descricao, qtd_estoque, valor, id_categoria, id_funcionario, data_fabricacao, id_foto) values
-   (1, 'God Of War',             'Careca psicopata e seu filho',   3 ,  850.00, 2, 3, '2022-11-24', 1),
-   (2, 'Ghost of Tsushima',        'sddsafasf',                   4 , 1850.00, 2, 3, '2022-11-24', 2),
-   (3, 'Cyber Punk',              'agasfasfasfsa',                 2 ,  150.00, 3, 2, '2022-11-24', 3),
-   (4, 'Fifa 23',       'asfasfasf',                    10 ,  75.00,  3, 2, '2022-11-24', 4),
-   (5, 'Farcry 6',          'asfsaffas',                      2 , 3850.00, 1, 1, '2022-11-24', 5),
-   (6, 'Gran Turismo 7',           'asfasfasf',                    2 ,   50.00, 1, 3, '2022-11-24', 6),
-   (7, 'SpiderMan',              'asfafasfs',                     33 ,    1.30, 2, 1, '2022-11-24', 7),
-   (8, 'Mortal Kombat 11',                'asfasfasfasf',                 13 ,   25.00, 1, 1, '2022-11-24', 8),
-   (9, 'The Last Of Us', 'asfsafasfsa',                  42 ,   55.00, 3, 2, '2022-11-24', 9);
+   (1, 'God Of War',             
+   'Kratos deve proteger seu filho Atreus e descobrir qual é o seu papel em uma trama que envolve os deuses e entidades da mitologia nórdica.',  
+    3 ,  200.00, 2, 3, '2022-11-24', 1),
+   (2, 'Ghost of Tsushima',        
+   'um samurai que precisa proteger a Ilha de Tsushima durante a primeira invasão mongol do Japão', 
+    4 , 180.00, 2, 3, '2022-11-24', 2),
+   (3, 'Cyber Punk',              
+   ' David Martinez — um adolescente que, após uma tragédia pessoal, decide assumir o controle de sua própria vida e atirar-se no submundo letal de Night City.',                
+    2 ,  200.00, 3, 2, '2022-11-24', 3),
+   (4, 'Fifa 23','Futebol',  10 ,  300.00,  3, 2, '2022-11-24', 4),
+   (5, 'Farcry 6',
+   'O jogador assume o papel de Dani Rojas, um membro da guerrilha tentando derrubar Castillo e seu regime.',                     2 , 180.00, 1, 1, '2022-11-24', 5),
+   (6, 'Gran Turismo 7',           
+   'O principal destaque da franquia e que tem se tornado mais forte a cada novo game da franquia, é a intenção de ser um simulador de corridas',                    
+   2 ,   150.00, 1, 3, '2022-11-24', 6),
+   (7, 'SpiderMan',              
+   'O protagonista é Peter Parker (Yuri Lowenthal), um assistente de pesquisa de 23 anos que ganhou poderes super-humanos',                     
+   33 ,    250.00, 2, 1, '2022-11-24', 7),
+   (8, 'Mortal Kombat 11',                
+   'Raiden bagunçou o tempo para impedir Shao Kahn e depois pegou o amuleto de Shinnok, corrompendo-se no processo e decidindo deixar a diplomacia de lado e usar a violência.',
+   13 ,   150.00, 1, 1, '2022-11-24', 8),
+   (9, 'The Last Of Us', 'The Last of Us Part I conta a história de Joel, um sobrevivente abatido que perdeu a filha no início de uma pandemia devastadora que dizimou a população',
+   42 ,   80.00, 3, 2, '2022-11-24', 9);
+   (10, 'T', 'xx', 2 ,   80.00, 3, 2, '2022-11-24', 10);
    
 insert into pedido (id, id_cliente, data_pedido, status) values 
   ( 1, 1, '2020-08-30 20:10:10', 4),
