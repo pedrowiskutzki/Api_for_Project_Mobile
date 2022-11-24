@@ -58,6 +58,24 @@ public class ClienteController {
 		ClienteDTO clienteDTO = clienteService.listarPorId(id);
 		return ResponseEntity.ok(clienteDTO);
 	}
+	
+	@GetMapping(path="/email/{email}",produces = {MediaType.APPLICATION_JSON_VALUE} )
+	public ResponseEntity<ClienteDTO> listarPorEmail(@PathVariable String email) throws DataNotFoundException {
+		ClienteDTO clienteDTO = clienteService.listarPorEmail(email);
+		return ResponseEntity.ok(clienteDTO);
+	}
+	
+	@GetMapping(path="/cpf/{cpf}",produces = {MediaType.APPLICATION_JSON_VALUE} )
+	public ResponseEntity<ClienteDTO> listarPorCpf(@PathVariable String cpf) throws DataNotFoundException {
+		ClienteDTO clienteDTO = clienteService.listarPorCpf(cpf);
+		return ResponseEntity.ok(clienteDTO);
+	}
+	
+	@GetMapping(path="/senha/{senha}",produces = {MediaType.APPLICATION_JSON_VALUE} )
+	public ResponseEntity<ClienteDTO> listarPorSenha(@PathVariable String senha) throws DataNotFoundException {
+		ClienteDTO clienteDTO = clienteService.listarPorSenha(senha);
+		return ResponseEntity.ok(clienteDTO);
+	}
 
 	@ApiOperation("Permite alterar um cliente e seu endereço")
 	@PutMapping(path="/{id}",consumes = {MediaType.APPLICATION_JSON_VALUE},
@@ -66,12 +84,27 @@ public class ClienteController {
 			throws DataNotFoundException {
 		return ResponseEntity.ok(clienteService.substituir(id, cliente));
 	}
+	
+	@ApiOperation("Permite alterar um cliente e seu endereço")
+	@PutMapping(path="/cpf/{cpf}",consumes = {MediaType.APPLICATION_JSON_VALUE},
+		     produces = {MediaType.APPLICATION_JSON_VALUE} )
+	public ResponseEntity<ClienteDTO> substituirPorCpf(@PathVariable String cpf, @RequestBody(required = true) ClienteDTO cliente)
+			throws DataNotFoundException {
+		return ResponseEntity.ok(clienteService.substituirPorCpf(cpf, cliente));
+	}
 
 	@ApiOperation("Permite excluir um cliente")
 	@ResponseStatus(code = HttpStatus.OK)
 	@DeleteMapping("/{id}")
 	public void deletar(@PathVariable Integer id) throws DataNotFoundException {
 		clienteService.deletar(id);
+	}
+	
+	@ApiOperation("Permite excluir um cliente")
+	@ResponseStatus(code = HttpStatus.OK)
+	@DeleteMapping("/cpf/{cpf}")
+	public void deletarCpf(@PathVariable String cpf) throws DataNotFoundException {
+		clienteService.deletarCpf(cpf);
 	}
 	
 }
